@@ -1,0 +1,4 @@
+body { background: #f6f8fb; }
+.hero { background: linear-gradient(135deg, #eaf2ff, #ffffff); border: 1px solid #dfe7f3; }
+.form-card { max-width: 480px; background: white; padding: 28px; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,.07); }
+.card { border: 0; box-shadow: 0 5px 18px rgba(0,0,0,.05); }

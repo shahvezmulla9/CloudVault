@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5 mb-4 hero rounded-4">
+  <div class="container-fluid py-4">
+    <h1 class="display-5 fw-bold">CloudVault Student Document Manager</h1>
+    <p class="col-md-8 fs-5">A cloud computing mini-project demonstrating PaaS, DBaaS, Storage as a Service, Security services, and an IaaS layer.</p>
+    {% if not current_user.is_authenticated %}
+    <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}">Create Account</a>
+    {% else %}
+    <a class="btn btn-primary btn-lg" href="{{ url_for('dashboard') }}">Open Dashboard</a>
+    {% endif %}
+  </div>
+</div>
+<div class="row g-3">
+  <div class="col-md-4"><div class="card h-100"><div class="card-body"><h5>Secure Login</h5><p>Password hashing and authenticated user sessions protect each account.</p></div></div></div>
+  <div class="col-md-4"><div class="card h-100"><div class="card-body"><h5>Managed Database</h5><p>User and file metadata can be stored in managed PostgreSQL.</p></div></div></div>
+  <div class="col-md-4"><div class="card h-100"><div class="card-body"><h5>Cloud Storage</h5><p>Files can be stored in Amazon S3 with short-lived download links.</p></div></div></div>
+</div>
+{% endblock %}
